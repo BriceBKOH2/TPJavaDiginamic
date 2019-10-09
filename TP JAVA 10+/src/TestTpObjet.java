@@ -6,10 +6,11 @@ public class TestTpObjet {
 
 	public static void main(String[] args) {
 		
-		Collection<Figure> p = FigureUtil.genere(6);
-		for (Figure f : p) {
-			f.affiche();
-		}
+		Collection<Figure> f = FigureUtil.genere(1000);
+		Dessin dessing = new Dessin(f);
+		Point p = new Point(50,50);
+		
+		FigureUtil.getFigureEn(p, dessing).affiche();
 
 	}
 

@@ -16,6 +16,11 @@ public class Dessin {
 		setFigures = new HashSet<Figure>();
 	}
 	
+	public Dessin(Collection<Figure> figureCollec) {
+		setFigures = new HashSet<Figure>();
+		setFigures.addAll(figureCollec);
+	}
+	
 	// -- Methods --
 	
 		// Getters

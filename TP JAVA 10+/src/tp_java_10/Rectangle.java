@@ -97,13 +97,12 @@ public class Rectangle extends Figure {
 		return pointTabList;
 	}
 	
-	public boolean couvre(Point p) {
-		for(Point testPoint : this.getPoints()) {
-			if (!testPoint.equals(p)) {
-				return false;
-			}
-		}
-		return true;
+	public boolean couvre(Point p) {	// If p is between origine and hautDroite, p is covered by the rectangle (origine = bottom left and hautDroite = top right)
+		return (p.getX() >= origine.getX() && p.getY() >= origine.getY()) && (p.getX() <= hautDroite.getX() && p.getY() <= hautDroite.getY());
+	}
+	
+	public boolean equals(Object o) {
+		
 	}
 	
 			// Interface heritage : Surfacable

@@ -2,6 +2,7 @@ package tp_java_10;
 
 import java.util.Collection;
 import java.util.HashSet;	// See getPoints method for explanation
+import java.util.Iterator;
 import java.util.Random;
 
 public class FigureUtil {
@@ -103,6 +104,21 @@ public class FigureUtil {
 	}
 	
 	public static Figure getFigureEn(Point pointArg, Dessin dessin) {
+		Collection<Figure> figureCollec = dessin.getFigure();
+		Iterator<Figure> iteratorFigure = figureCollec.iterator();
+		Figure resultat;
+		Figure figureStock;
 		
+		while(iteratorFigure.hasNext()) {			// Accessing Loop
+			figureStock = iteratorFigure.next();
+			
+			
+			if (figureStock.couvre(pointArg)) {		//Testing loop
+				resultat=figureStock;
+				return (resultat);
+			}
+		}	
+		return null;
 	}
+	
 }

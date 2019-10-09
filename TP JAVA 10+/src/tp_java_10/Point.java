@@ -6,7 +6,7 @@ public class Point {
 	
 	// Constants
 	
-	protected static final int VAL_MAX_POINT = 75;
+	protected static final int VAL_MAX_POINT = 75; // use to create random point with coordinates between 0 and 74
 	
 	// Attributes
 	

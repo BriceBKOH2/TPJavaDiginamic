@@ -37,6 +37,12 @@ public class Segment extends Figure {
 	
 	// Methods
 	
+		// Getters
+	
+	public Point getFinSegment() {
+		return finSegment;
+	}
+	
 		// Others
 	
 	public String getType() {
@@ -60,12 +66,8 @@ public class Segment extends Figure {
 	}
 	
 	public boolean couvre(Point p) {
-		for(Point testPoint : this.getPoints()) {
-			if (!testPoint.equals(p)) {
-				return false;
-			}
-		}
-		return true;
+		// A DEFINIR !
+		return false;
 	}
 	
 }
